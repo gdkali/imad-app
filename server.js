@@ -28,6 +28,7 @@ function createTemplate(data){
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
+    
 var htmtemplate=`
   <html>
     <head>
@@ -53,6 +54,7 @@ var htmtemplate=`
 </html>
 `;
 }
+  return htmtemplate;
 
 app.get('/ui/article-one.html', function (req, res) {
   res.sendFile(createTemplate(articleOne));
@@ -74,7 +76,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/', function (req, res) {
+app.get('/index.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
