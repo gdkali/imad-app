@@ -53,7 +53,7 @@ var htmltemplate=`
 </html>
 `;
 }
-
+ return htmltemplate;
 
 app.get('/ui/article-one.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
