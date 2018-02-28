@@ -152,7 +152,7 @@ app.get("/:articleName",function(req,res){
     //articleName == article-one
     //articles[articleName] == {} content object for article one
     var articleName = req.params.articleName;
-    res send(xyz)(articles[articleName])));
+    res.send(xyz)(articles[articleName])));
 });
 app.get('/ui/article-one.html', function (req, res) {
   res.send(xyz(articleOne));
