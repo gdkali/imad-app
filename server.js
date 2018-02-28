@@ -53,10 +53,9 @@ var htmtemplate=`
 </html>
 `;
 }
- return htmltemplate;
 
 app.get('/ui/article-one.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+  res.sendFile(createTemplate(articleOne));
 });
 
 app.get('/ui/article-two.html', function (req, res) {
