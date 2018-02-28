@@ -28,7 +28,7 @@ function createTemplate(data){
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
-var htmltemplate=`
+var htmtemplate=`
   <html>
     <head>
         <title>${title}</title>
@@ -56,7 +56,7 @@ var htmltemplate=`
  return htmltemplate;
 
 app.get('/ui/article-one.html', function (req, res) {
-  res.sendFile(createTemplate(articleOne));
+  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
 
 app.get('/ui/article-two.html', function (req, res) {
@@ -75,8 +75,8 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('article-one', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
