@@ -40,7 +40,7 @@ var htmltemplate=`
     <body>
         <div class=container>
         <hr/>
-        <h3>${Article One}</h3>
+        <h3>${heading}</h3>
         <div>${date}</div>
         <div>
             ${content}
