@@ -29,7 +29,7 @@ function xyz(data){
     var heading=data.heading;
     var content=data.content;
     
-var htmltemplate=`
+var ht=`
   <html>
     <head>
         <title>${title}</title>
@@ -54,9 +54,9 @@ var htmltemplate=`
 </html>
 `;
 }
-  return htmltemplate;
+  return ht;
   
-app.get('/index.html', function (req, res) {
+app.get('/ui/index', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
   
