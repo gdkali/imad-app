@@ -53,8 +53,8 @@ var ht=`
     </body>
 </html>
 `;
+return ht;
 }
-  return ht;
   
 app.get('/ui/index', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
