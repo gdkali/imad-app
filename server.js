@@ -78,7 +78,7 @@ return ht;
 });
 
 app.get('/ui/article-one.html', function (req, res) {
-  res.send(xyz(articleOne));
+  res.send(xyz(articleone));
 });
 
 app.get('/ui/article-two.html', function (req, res) {
