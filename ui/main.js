@@ -22,6 +22,6 @@ button.onclick =function(){
     };
     //render variable
     //make request
-    request.open('GET','http://gaganmishr17.imad.hasura-app.io/',true);
+    request.open('GET','http://gaganmishr17.imad.hasura-app.io/counter',true);
     request.send(null);
 };
