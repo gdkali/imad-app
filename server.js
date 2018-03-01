@@ -77,8 +77,11 @@ return ht;
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/ui/article-one.html', function (req, res) {
-  res.send(xyz(articleone));
+app.get('/:articleName', function (req, res) {
+  //articleName == article-one
+  //articles[articleName] == {} content object for article one
+  var articleName = req.params.articleName;
+  res.send(xyz(articles[articleName]));
 });
 
 app.get('/ui/article-two.html', function (req, res) {
