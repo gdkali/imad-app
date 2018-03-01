@@ -29,7 +29,7 @@ button.onclick =function(){
 //submit name
 var nameInput = document.getElementById('name');
 var name = nameInput.value;
-var submit =document.getELementById('submitbtn);
+var submit =document.getELementById('submitbtn');
 submit.onclick=function(){
     
     // make a request
