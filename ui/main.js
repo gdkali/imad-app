@@ -8,8 +8,8 @@ element.innerHTML ="New Value";
 
 //mmove image
 
-var img=document.getElementById('img');
-img.onclick =function(){
-    img.style.marginright ='500px';
+var img = document.getElementById('abc');
+img.onclick =function () {
+    img.style.marginleft ='500px';
     
 };
