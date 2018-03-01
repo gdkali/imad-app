@@ -8,11 +8,20 @@ var counter =0;
 button.onclick =function(){
     
     //make a request to the counter
-    
+    var request=new XMLHttpRequest();
     //capture response
-    
+    request.onreadystatechange =function(){
+        if (request.readyState == XMLHttpRequest.DONE){
+            //take some action
+            if (request.status == 200){
+                var counter =request.responseText;
+                var span=document.getElementById('count');
+                span.innerHTML = counter.toString();
+            }
+        }
+    };
     //render variable
-    counter=counter +1;
-    var span= document.getElementById('count');
-    span.innerHTML=counter.toString();
-}
+    //make request
+    request.open('GET','http://gaganmishr17.imad.hasura-app.io/',true);
+    request.send(null);
+};
