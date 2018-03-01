@@ -10,6 +10,6 @@ element.innerHTML ="New Value";
 
 var img = document.getElementById('abc');
 img.onclick =function () {
-    img.style.marginleft ='500px';
+    img.style.marginright ='500px';
     
 };
