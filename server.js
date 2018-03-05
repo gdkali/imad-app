@@ -92,9 +92,19 @@ app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
 });
- app.get('test-db',function(req,res){
+
+var pool= new Pool(config);
+ app.get('/test-db',function(req,res){
      //make a request
      //return a response with the results
+     pool.query('SELECT *FROM test',function(err,result){
+         if (err){
+             res.status(500).send(err.toString());
+         } else {
+             res.send(JSON.stringfy(result));
+         }     
+         
+     });
      
  });   
 app.get('/:articleName', function (req, res) {
