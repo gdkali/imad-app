@@ -1,7 +1,16 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool =require('path');
 
+var config = {
+    user:'gaganmishr17',
+    database:'gaganmishr17',
+    host:'db.imad.hasura-app.io',
+    port:'5432',
+    password:process.env.DB_PASSWORD
+    
+};
 var app = express();
 app.use(morgan('combined'));
 
@@ -73,6 +82,7 @@ var ht=`
 return ht;
 }
 
+
  app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -82,7 +92,11 @@ app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
 });
-    
+ app.get('test-db',function(req,res){
+     //make a request
+     //return a response with the results
+     
+ });   
 app.get('/:articleName', function (req, res) {
   //articleName == article-one
   //articles[articleName] == {} content object for article one
