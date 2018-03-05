@@ -102,7 +102,7 @@ app.get('/:articleName', function (req, res) {
 });
 
 var pool= new Pool(config);
-app.get('/test-db',function(req,res){
+app.get('/:test-db',function(req,res){
      //make a request
      //return a response with the results
      pool.query('SELECT *FROM test',function(err,result){
