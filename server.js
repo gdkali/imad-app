@@ -114,7 +114,7 @@ app.get('/hash/:input',function(req,res){
 
 
 var Pool= new Pool(config);
-app.get('/test-db',function(req,res){
+app.get('/test-db:input',function(req,res){
      //make a request
      //return a response with the results
      pool.query('SELECT *FROM test',function(err,result){
