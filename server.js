@@ -103,7 +103,7 @@ app.get('/:articleName', function (req, res) {
 });
 
 function hash(input,salt){
-    var hashed = crypto.pbkdf2(input,salt,100,512,'sha512');
+    var hashed = crypto.pbkdf2Sync(input,salt,100,512,'sha512');
     return hashed.toString('hex');
 }
 
