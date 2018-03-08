@@ -102,7 +102,7 @@ app.get('/:articleName', function (req, res) {
   res.send(xyz(articles[articleName]));
 });
 
-var pool= new Pool(config);
+var Pool= new Pool(config);
 app.get('/test-db',function(req,res){
      //make a request
      //return a response with the results
